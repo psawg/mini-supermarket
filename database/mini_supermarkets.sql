@@ -42,9 +42,15 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`id`, `username`, `password`, `role_id`, `staff_id`, `last_signed_in`, `deleted`) VALUES
+<<<<<<< Updated upstream
 (1, 'admin', '$2a$12$SZB/1vXADdqe.9TNF41z4.1HDXdmzc74Ts6vmWvRKTm6Ji6/P.1lW', 1, 1, '2023-12-14 22:11:35.017008', b'0'),
 (2, 'sang', 'Sang123', 2, 6, '2023-12-14 22:11:35.017008', b'0'),
 (3, 'longbott', '$2a$12$HFoTs4o0lCrdCECFaM6xGuS5ZUTriWifilWSEcjT7HHksytiJewvq', 2, 4, '2024-01-17 10:08:05.408499', b'0');
+=======
+(1, 'admin', 'quang123', 1, 1, '2023-12-14 22:11:35.017008', b'0'),
+(2, 'sang', 'quang1234', 2, 6, '2023-12-14 22:11:35.017008', b'0'),
+(3, 'longbott', 'quang12345', 2, 4, '2024-01-17 10:08:05.408499', b'0');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 

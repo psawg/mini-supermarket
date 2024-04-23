@@ -1,7 +1,5 @@
 package com.supermarket.utils;
 
-import org.mindrot.jbcrypt.BCrypt;
-
 import java.security.SecureRandom;
 
 public class Password {
@@ -26,13 +24,4 @@ public class Password {
         }
         return password.toString();
     }
-
-    public static String hashPassword(String plainTextPassword) {
-        return BCrypt.hashpw(plainTextPassword, BCrypt.gensalt(12));
-    }
-
-    public static boolean verifyPassword(String inputPassword, String hashedPassword) {
-        return BCrypt.checkpw(inputPassword, hashedPassword);
-    }
 }
-

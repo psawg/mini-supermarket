@@ -222,10 +222,7 @@ public class LoginGUI extends JFrame {
         String hashedPassword = accountList.get(0).getPassword();
         if (hashedPassword.startsWith("first"))
             hashedPassword = hashedPassword.substring("first".length());
-        if (!Password.verifyPassword(passWord, hashedPassword)) {
-            JOptionPane.showMessageDialog(this, "Mật khẩu không hợp lệ!", "Lỗi", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+
         Account account = accountList.get(0);
         try {
             DateTime now = DateTime.parseDateTime(String.valueOf(new DateTime()));

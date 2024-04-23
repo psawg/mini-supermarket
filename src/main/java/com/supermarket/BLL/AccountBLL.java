@@ -62,8 +62,8 @@ public class AccountBLL extends Manager<Account> {
         }
 
         String password = Password.generateRandomPassword(8);
-        String hashedPassword = Password.hashPassword(password);
-        account.setPassword("first" + hashedPassword);
+       // String hashedPassword = Password.hashPassword(password);
+      //  account.setPassword("first" + hashedPassword);
         account.setLast_signed_in(DateTime.MIN);
 
         if (accountDAL.addAccount(account) == 0)

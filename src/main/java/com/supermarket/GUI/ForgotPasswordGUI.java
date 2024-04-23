@@ -335,8 +335,8 @@ public class ForgotPasswordGUI extends JDialog {
             JOptionPane.showMessageDialog(this, "Mật khẩu không được chứa khoảng trắng.\nMật khẩu phải chứa ít nhất 1 chữ cái thường, 1 chữ cái hoa and 1 chữ số");
             return;
         }
-        String hashedPassword = Password.hashPassword(password);
-        account.setPassword(hashedPassword);
+//       // String hashedPassword = Password.hashPassword(password);
+//        account.setPassword(hashedPassword);
         if (!new AccountBLL().updateAccountPassword(account)) {
             JOptionPane.showMessageDialog(this, "Thay đổi mật khẩu không thành công. Vui lòng thử lại sau.", "Lỗi", JOptionPane.ERROR_MESSAGE);
             return;
