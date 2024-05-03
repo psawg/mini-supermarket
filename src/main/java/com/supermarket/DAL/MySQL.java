@@ -8,9 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class
-
-MySQL {
+public class MySQL {
     public MySQL() {
     }
 
@@ -18,7 +16,7 @@ MySQL {
         Connection connection = Database.getConnection();
         if (connection == null)
             return new ArrayList<>();
-        List<List<String>> result;
+            List<List<String>> result;
         try (Statement statement = connection.createStatement()) {
             String formattedQuery = formatQuery(query, values);
             result = new ArrayList<>();

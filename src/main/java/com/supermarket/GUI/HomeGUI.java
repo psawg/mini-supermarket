@@ -337,16 +337,16 @@ public class HomeGUI extends JFrame {
             case 0 -> home();
             case 1 -> new SaleGUI(account);
             case 2 -> new ShipmentGUI(functions);
-            case 3 -> new StatisticGUI();
-            case 4, 5 -> new DiscountGUI(functions);
-            case 6 -> new ReceiptGUI(functions);
-            case 7 -> new ExportGUI(functions);
-            case 8 -> new ImportGUI(functions);
-            case 9 -> new ProductGUI(functions);
-            case 10 -> new SupplierGUI(functions);
-            case 11 -> new StaffGUI(functions);
-            case 12 -> new AccountGUI(functions);
-            case 13 -> new DecentralizationGUI(functions);
+//            case 3 -> new StatisticGUI();
+            case 3, 4 -> new DiscountGUI(functions);
+            case 5 -> new ReceiptGUI(functions);
+            case 6 -> new ExportGUI(functions);
+            case 7 -> new ImportGUI(functions);
+            case 8 -> new ProductGUI(functions);
+            case 9 -> new SupplierGUI(functions);
+            case 10 -> new StaffGUI(functions);
+            case 11 -> new AccountGUI(functions);
+            case 12 -> new DecentralizationGUI(functions);
             default -> null;
         };
     }
@@ -395,13 +395,6 @@ public class HomeGUI extends JFrame {
         RoundedPanel panel = new RoundedPanel();
         panel.setLayout(new GridBagLayout());
         panel.setBackground(new Color(0x8EBCDA));
-//        panel.setCursor(new Cursor(Cursor.HAND_CURSOR));
-//        panel.addMouseListener(new MouseAdapter() {
-//            @Override
-//            public void mousePressed(MouseEvent e) {
-//                new ManageBannersGUI();
-//            }
-//        });
         renderBanners(panel);
         return panel;
     }
@@ -449,13 +442,6 @@ public class HomeGUI extends JFrame {
         autoRenderBanner.start();
     }
 
-    private void OpenChildForm(JPanel panel) {
-        content.removeAll();
-        content.add(panel, BorderLayout.CENTER);
-        content.repaint();
-        content.revalidate();
-        right.add(content);
-    }
 
     public void setTime() {
         while (true) {
