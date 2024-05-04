@@ -220,10 +220,10 @@ public class LoginGUI extends JFrame {
             return;
         }
         String hashedPassword = accountList.get(0).getPassword();
-        if (hashedPassword.startsWith("first"))
-            hashedPassword = hashedPassword.substring("first".length());
+
 
         Account account = accountList.get(0);
+
         try {
             DateTime now = DateTime.parseDateTime(String.valueOf(new DateTime()));
             accountBLL.updateAccountLast_signed_in( account, now);
@@ -232,13 +232,19 @@ public class LoginGUI extends JFrame {
         }
 
         try {
+
+            if (passWord.equals(hashedPassword)) {
+                JOptionPane.showMessageDialog(this, "Đăng nhập thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
             Thread thread = new Thread(() -> Mini_supermarketManagement.homeGUI.setAccount(account));
             thread.start();
-            JOptionPane.showMessageDialog(this, "Đăng nhập thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+
             thread.join();
             dispose();
             System.gc();
             Mini_supermarketManagement.homeGUI.setVisible(true);
+        }
+            else
+                JOptionPane.showMessageDialog(this, "Sai mật khẩu", "Thông báo", JOptionPane.ERROR_MESSAGE);
             if (account.getPassword().startsWith("first")) {
                 ForgotPasswordGUI forgotPasswordGUI = new ForgotPasswordGUI();
                 forgotPasswordGUI.setAccount(account);
