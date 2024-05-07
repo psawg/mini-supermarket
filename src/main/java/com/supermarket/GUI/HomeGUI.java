@@ -414,7 +414,7 @@ public class HomeGUI extends JFrame {
         panel.revalidate();
         content.add(panel);
         autoRenderBanner = new Thread(() -> {
-        DateTime start = new DateTime();
+            DateTime start = new DateTime();
             while (!Thread.currentThread().isInterrupted()) {
                 if (!banners.isEmpty()) {
                     if (DateTime.calculateTime(start, new DateTime()) == 3) {
