@@ -90,7 +90,7 @@ public class DecentralizationTable extends JScrollPane {
                     checkboxes[i][j].setEnabled(true);
             }
         }
-        checkboxes[12][0].setVisible(role.getId() != 1);
+        checkboxes[13][0].setVisible(role.getId() != 1);
     }
 
     public void refreshTable() {

@@ -69,29 +69,29 @@ public class MySQL {
         return query;
     }
 
-    public static List<List<String>> executeQueryStatistic(String query) throws SQLException, IOException {
-        Connection connection = Database.getConnection();
-        if (connection == null)
-            return new ArrayList<>();
-        List<List<String>> result;
-        try (Statement statement = connection.createStatement()) {
-            result = new ArrayList<>();
-            ResultSet resultSet = statement.executeQuery(query);
-            ResultSetMetaData metaData = resultSet.getMetaData();
-            int columnCount = metaData.getColumnCount();
-            while (resultSet.next()) {
-                List<String> row = new ArrayList<>(columnCount);
-                for (int i = 1; i <= columnCount; i++) {
-                    if (resultSet.getObject(i) == null)
-                        row.add("0");
-                    else
-                        row.add(resultSet.getObject(i).toString());
-                }
-                result.add(row);
-            }
-            System.out.println(query);
-        }
-        Database.closeConnection(connection);
-        return result;
-    }
+//    public static List<List<String>> executeQueryStatistic(String query) throws SQLException, IOException {
+//        Connection connection = Database.getConnection();
+//        if (connection == null)
+//            return new ArrayList<>();
+//        List<List<String>> result;
+//        try (Statement statement = connection.createStatement()) {
+//            result = new ArrayList<>();
+//            ResultSet resultSet = statement.executeQuery(query);
+//            ResultSetMetaData metaData = resultSet.getMetaData();
+//            int columnCount = metaData.getColumnCount();
+//            while (resultSet.next()) {
+//                List<String> row = new ArrayList<>(columnCount);
+//                for (int i = 1; i <= columnCount; i++) {
+//                    if (resultSet.getObject(i) == null)
+//                        row.add("0");
+//                    else
+//                        row.add(resultSet.getObject(i).toString());
+//                }
+//                result.add(row);
+//            }
+//            System.out.println(query);
+//        }
+//        Database.closeConnection(connection);
+//        return result;
+//    }
 }

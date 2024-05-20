@@ -87,7 +87,6 @@ public class SaleGUI extends SalePanel {
         cbbCategory = new JComboBox();
         cbbBrand = new JComboBox();
         jTextFieldSearch = new JTextField();
-        jTextFieldSearchCustomer = new JTextField();
         jTextFieldProductDetail = new ArrayList<>();
         jTextFieldBill = new ArrayList<>();
         buttonAddProduct = new JButton("Thêm");
@@ -107,6 +106,11 @@ public class SaleGUI extends SalePanel {
 
         Thread thread = new Thread( () -> loadProduct(productBLL.getProductList()));
         thread.start();
+        //Lợi ích của việc sử dụng luồng là nó cho phép các tác vụ được thực hiện song song và không chặn luồng chính của chương trình.
+        // Điều này có thể cải thiện hiệu suất và tương tác người dùng của ứng dụng.
+
+
+
 
         cbbAttributeProduct.setPreferredSize(new Dimension(130, 30));
         cbbAttributeProduct.addActionListener(e -> selectSearchFilter());

@@ -24,18 +24,18 @@ public abstract class Manager<T> {
         return id+1;
     }
 
-    public String formatNumberToString(int number, int digits) {
-        String format = "%0" + digits + "d";
-        return String.format(format, number);
-    }
-
-    public List<Object> getObjectsProperty(String key, List<T> objectList) {
-        List<Object> listOfProperties = new ArrayList<>();
-        for (T object : objectList) {
-            listOfProperties.add(getValueByKey(object, key));
-        }
-        return listOfProperties;
-    }
+//    public String formatNumberToString(int number, int digits) {
+//        String format = "%0" + digits + "d";
+//        return String.format(format, number);
+//    }
+//
+//    public List<Object> getObjectsProperty(String key, List<T> objectList) {
+//        List<Object> listOfProperties = new ArrayList<>();
+//        for (T object : objectList) {
+//            listOfProperties.add(getValueByKey(object, key));
+//        }
+//        return listOfProperties;
+//    }
 
     public List<T> findObjectsBy(String key, Object value, List<T> objectList) {
         List<T> objects = new ArrayList<>();

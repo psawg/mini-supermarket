@@ -155,19 +155,6 @@ public class DiscountGUI extends Layout3 {
             jDateChooser[i].setMinSelectableDate(new Date(1, 1, 1000).toJDateSafe());
             dateTextField[i] = (JTextField) jDateChooser[i].getDateEditor().getUiComponent();
             dateTextField[i].setFont(new Font("Tahoma", Font.BOLD, 14));
-//            int index = i;
-//            dateTextField[i].addKeyListener(new KeyAdapter() {
-//                @Override
-//                public void keyTyped(KeyEvent e) {
-//                    try {
-//                        Date day = Date.parseDate(dateTextField[index].getText());
-//                        jDateChooser[index].setDate(day.toJDate());
-//                    } catch (Exception ex) {
-//                        JOptionPane.showMessageDialog(null, "Ngày không hợp lệ", "Lỗi", JOptionPane.ERROR_MESSAGE);
-//                        e.consume();
-//                    }
-//                }
-//            });
         }
 
         for (String string : new String[]{"Mã đợt giảm giá:", "Phần trăm giảm giá:", "Ngày BĐ:", "Ngày KT:", "Trạng thái:"}) {

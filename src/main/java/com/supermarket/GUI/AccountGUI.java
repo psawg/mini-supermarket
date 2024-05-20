@@ -64,7 +64,7 @@ public class AccountGUI extends Layout1 {
 
         if (functions.stream().anyMatch(f -> f.getName().equals("Chi tiết"))) {
             iconDetail.setIcon(new FlatSVGIcon("icon/detail.svg"));
-            iconDetail.setCursor(new Cursor(Cursor.HAND_CURSOR));
+            iconDetail.setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
             iconDetail.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mousePressed(MouseEvent e) {

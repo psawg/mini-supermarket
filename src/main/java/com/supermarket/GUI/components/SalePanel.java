@@ -49,6 +49,7 @@ public class SalePanel extends RoundedPanel{
         left.setBackground(new Color(0xFFFFFF));
         add(left, BorderLayout.WEST);
 
+
         right.setLayout(new BorderLayout());
         right.setPreferredSize(new Dimension(350, 760));
         add(right, BorderLayout.EAST);

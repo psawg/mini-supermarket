@@ -337,8 +337,7 @@ public class HomeGUI extends JFrame {
             case 0 -> home();
             case 1 -> new SaleGUI(account);
             case 2 -> new ShipmentGUI(functions);
-//            case 3 -> new StatisticGUI();
-            case 3, 4 -> new DiscountGUI(functions);
+            case 3,4 -> new DiscountGUI(functions);
             case 5 -> new ReceiptGUI(functions);
             case 6 -> new ExportGUI(functions);
             case 7 -> new ImportGUI(functions);
@@ -356,17 +355,15 @@ public class HomeGUI extends JFrame {
             case 0 -> new FlatSVGIcon("icon/home.svg");
             case 1 -> new FlatSVGIcon("icon/sales.svg");
             case 2 -> new FlatSVGIcon("icon/warehouse.svg");
-            case 3 -> new FlatSVGIcon("icon/statistic.svg");
-            case 4 -> new FlatSVGIcon("icon/discount.svg");
-            case 5 -> new FlatSVGIcon("icon/promotion.svg");
-            case 6 -> new FlatSVGIcon("icon/receipt.svg");
-            case 7 -> new FlatSVGIcon("icon/export.svg");
-            case 8 -> new FlatSVGIcon("icon/import.svg");
-            case 9 -> new FlatSVGIcon("icon/product.svg");
-            case 10 -> new FlatSVGIcon("icon/supplier.svg");
-            case 11 -> new FlatSVGIcon("icon/staff.svg");
-            case 12 -> new FlatSVGIcon("icon/account.svg");
-            case 13 -> new FlatSVGIcon("icon/decentralization.svg");
+            case 3,4 -> new FlatSVGIcon("icon/discount.svg");
+            case 5 -> new FlatSVGIcon("icon/receipt.svg");
+            case 6 -> new FlatSVGIcon("icon/export.svg");
+            case 7 -> new FlatSVGIcon("icon/import.svg");
+            case 8 -> new FlatSVGIcon("icon/product.svg");
+            case 9 -> new FlatSVGIcon("icon/supplier.svg");
+            case 10 -> new FlatSVGIcon("icon/staff.svg");
+            case 11 -> new FlatSVGIcon("icon/account.svg");
+            case 12 -> new FlatSVGIcon("icon/decentralization.svg");
             default -> null;
         };
     }
